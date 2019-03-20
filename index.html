@@ -12,43 +12,15 @@
         <!-- Templates here -->
 
         <template id="github-login">
-            <span id="notloggedin">
-                You are not yet logged in!
-                <button id="login">Log in!</button>
-            </span>
-
-            <span id="loggedin">
-                Logged in as: <span id="username"></span> 
-                <button id="logout">Log out!</button>
-            </span>
-
-            <style>
-                :host {
-                    display: block;
-                }
-            </style>
+            
         </template>
 
         <template id="github-repositorylister">
-            <h2>Find repositories</h2>
-            <input type="text" id="repository" placeholder="Username (empty for self)" /> <button id="find">Go!</button>
-
-            <div id="repositories">
-                <!-- To be filled by the component -->
-            </div>
-
-            <style>
-                :host {
-                    display: block;
-                }
-            </style>
+            
         </template>
 
         <template id="github-repository">
-            <div>
-                <h3><slot name="title">Repo title</slot></h3>
-                <p><slot name="description">Description</slot></p>
-            </div>
+            
         </template>
 
         <!-- End templates -->
