@@ -14,7 +14,7 @@ export default {
         return await fetch(`https://api.github.com/${url}`, {
             method: method,
             headers: {
-                "Authorization": `${credentials.username}:${credentials.key}`,
+                "Authorization": `Basic ${btoa(`${credentials.username}:${credentials.key}`)}`,
                 "Content-Type": "application/json"
             }
         });

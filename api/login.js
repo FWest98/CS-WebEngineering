@@ -15,8 +15,10 @@ export default {
      */
     login(username, key) {
         // Temporarily store the credentials
-        window.localStorage.username = username;
-        window.localStorage.key = key;
+        window.localStorage.setItem("username", username);
+        window.localStorage.setItem("key", key);
+
+        window.dispatchEvent(new Event("loginstatuschange"));
     },
 
     /**
@@ -27,7 +29,7 @@ export default {
     getCredentials() {
         // Returns the username and password
         if(!this.isLoggedIn()) return;
-        return { username: window.localStorage.username, key: window.localStorage.getItem("key") };
+        return { username: window.localStorage.getItem("username"), key: window.localStorage.getItem("key") };
     },
 }
 

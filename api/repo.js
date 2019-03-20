@@ -15,7 +15,7 @@ export default {
      * username is given.
      * 
      * @param {string} username
-     * @returns {Promise<Repository>}
+     * @returns {Promise<Array.<Repository>>}
      */
     async getRepositories(username = "") {
         if(!login.isLoggedIn()) return;
